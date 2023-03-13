@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titre{
+    padding-left: 10% ;
+}
+
+.ici{
+    width: 5%;
+    height: 10%;
+    background: white;
+    border: 2px solid;
+    color: black;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.smak{
+    background-image: url(/public/img/fde.jpg);
+}
+
+.image{
+    margin-top: 22px;
+    padding-left: 50px;
+
+}
