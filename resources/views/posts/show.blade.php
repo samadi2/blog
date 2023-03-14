@@ -7,15 +7,13 @@
 
 	<img src="{{ asset('storage/'.$post->picture) }}" alt="Image de couverture" style="max-width: 300px;"  class="image">
 
-    <div class="card-body">{{ $post->content }}</div>
+    <div class="para">{{ $post->content }}</div>
     <hr>
     <h5>Commentaires</h5>
     @forelse ($post->comments as $comment)
     <div class="card">
         <div class="card-body">
-            <span>Ecrit par :{{ Auth::user()->name }}</span>|
-            <small>{{ $comment->created_at->format('j M Y, g:i a') }}</small><br><hr>
-            {{ $comment->content}}
+           <p class="par">{{ $comment->content}}</p> 
         </div>
     </div>
     @empty
@@ -29,7 +27,7 @@
         </div>
         <button type="submit" class="btn btn-primary mt-2">Soumettre mon commentaire</button>
     </form>     
-    <div class="buttons mt-3">
+    <div class="buttons mt-3 btn">
         <a href="{{ route('posts.edit', $post) }}" class="btn btn-info">Modifier</a>
         <form action="{{ url('posts/'. $post->id) }}" method="POST" style="display: inline">
             @csrf

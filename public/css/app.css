@@ -5,12 +5,24 @@
 .titre{
     padding-left: 10% ;
 }
+.par{
 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    padding-left: 8px;
+}
+.btn{
+    align-items: center;
+}
+.para{
+    font-size: 28px;
+    padding-left: 15px;
+}
 .ici{
     width: 5%;
     height: 10%;
-    background: white;
-    border: 2px solid;
+    font-size: 32px;
     color: black;
     padding-left: 10px;
     margin-top: 5px;
