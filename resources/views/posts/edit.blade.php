@@ -2,7 +2,7 @@
 @section("content")
 
 <section class="flex flex-col  rounded-lg p-4">
-<h1>Ajouter un post</h1>
+<h1>Modifier le post</h1>
 
 <!-- Si nous avons un Post $post -->
 @if (isset($post))

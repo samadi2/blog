@@ -1,11 +1,12 @@
 @extends("layouts.app")
 @section("content")
 
+<section class="sec">
 	<h1>Créer un post</h1>
 
 	<!-- Le formulaire est géré par la route "posts.store" -->
 	<form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data" >
-
+	
 		<!-- Le token CSRF -->
 		@csrf
 		
@@ -40,5 +41,7 @@
 		<input type="submit" name="valider" value="Valider" >
 
 	</form>
+</section>
+
 
 @endsection
