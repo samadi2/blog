@@ -53,3 +53,7 @@
 .title, .tit, .ima, .cont, .inp{
     color: white;
 }
+
+.tete{
+    background: url(public/img/fde.jpg);
+}
