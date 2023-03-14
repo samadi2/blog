@@ -48,6 +48,8 @@
     margin-top: 60px;
     border: 2px solid #252525;
     border-radius: 10px;
-    color: white;
     background: rgba(0,0, 0, 0.5);
+}
+.title, .tit, .ima, .cont, .inp{
+    color: white;
 }

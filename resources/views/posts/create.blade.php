@@ -2,7 +2,7 @@
 @section("content")
 
 <section class="sec">
-	<h1>Créer un post</h1>
+	<h1 class="tit">Créer un post</h1>
 
 	<!-- Le formulaire est géré par la route "posts.store" -->
 	<form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data" >
@@ -20,7 +20,7 @@
 			@enderror
 		</p>
 		<p>
-			<label for="picture" >Image</label><br/>
+			<label class="ima" for="picture" >Image</label><br/>
 			<input type="file" name="picture" id="picture" >
 
 			<!-- Le message d'erreur pour "picture" -->
@@ -29,7 +29,7 @@
 			@enderror
 		</p>
 		<p>
-			<label for="content" >Contenu</label><br/>
+			<label class="cont" for="content" >Contenu</label><br/>
 			<textarea name="content" id="content" lang="fr" rows="10" placeholder="Le contenu du post" >{{ old('content') }}</textarea>
 
 			<!-- Le message d'erreur pour "content" -->
@@ -38,7 +38,7 @@
 			@enderror
 		</p>
 
-		<input type="submit" name="valider" value="Valider" >
+		<input class="inp" type="submit" name="valider" value="Valider" >
 
 	</form>
 </section>
