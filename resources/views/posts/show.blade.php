@@ -13,7 +13,7 @@
     @forelse ($post->comments as $comment)
     <div class="card">
         <div class="card-body">
-            <span>Ecrit par :{{ Auth::user()->name }}</span>|
+            <span>Ecrit par :{{ $comment->user->name }}</span>|
             <small>{{ $comment->created_at->format('j M Y, g:i a') }}</small><br><hr>
            <p class="par">{{ $comment->content}}</p> 
         </div>

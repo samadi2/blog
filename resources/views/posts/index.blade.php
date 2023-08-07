@@ -36,7 +36,7 @@
                         {{ $posts->title }}
                     </h2>
                 </a>
-            <p>Ecrit par: {{ Auth::user()->name }}| date: {{ $posts->created_at }}</p>
+            <p>Ecrit par: {{ $posts->user->name }}| date: {{ $posts->created_at }}</p>
             <a href="{{ url('posts/'. $posts->id) }}" class="btn btn-outline-primary">En savoir plus</a>
             </div>
         </div>

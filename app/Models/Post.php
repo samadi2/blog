@@ -11,9 +11,21 @@ class Post extends Model
     
     protected $fillable = [ "title", "picture", "content" ];
 
+    public static function bool(){
+        parent::boot();
+        self::creating(function ($post){
+            $post->user->associate(auth()->user()->id);
+        });
+    }
+
     
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function comments()
     {
-        return $this->morphMany('App\Models\Comment', 'commentable')->latest();
+        return $this->hasMany(Comment::class);
     }
 }

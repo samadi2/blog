@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource("posts", PostController::class);
 
 // Route::post('/posts/{id}', [CommentController::class,'store'])->name('comments.store');
-Route::post('/posts/{post}', [CommentController::class,'store'])->name('comments.store');
+Route::post('/posts/{post}/comments', [CommentController::class,'store'])->name('comments.store');
 
 Route::get('/', function () {
     return view('welcome');
