@@ -11,10 +11,10 @@ class Post extends Model
     
     protected $fillable = [ "title", "picture", "content" ];
 
-    public static function bool(){
+    public static function boot(){
         parent::boot();
         self::creating(function ($post){
-            $post->user->associate(auth()->user()->id);
+            $post->user()->associate(auth()->user()->id);
         });
     }
 

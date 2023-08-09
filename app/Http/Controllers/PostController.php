@@ -11,10 +11,11 @@ class PostController extends Controller
 {
     public function index() { 
     //On récupère tous les Post
-    $posts = Post::latest()->get();
+    $posts = Post::with('user')->latest()->get();
 
     // On transmet les Post à la vue
     return view("posts.index", compact("posts"));
+    return view("/", compact("posts"));
     }
     
 

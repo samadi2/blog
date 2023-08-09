@@ -2,16 +2,18 @@
 
 @section('content')
 
+    
     <div class="row">
 
-        <div class="col-lg-10 mt-3">
+        <!-- <div class="col-lg-10 mt-3">
             <h2 class="titre">Blog</h2>
-        </div>
+        </div> -->
 
+        @auth
         <div class="col-lg-2 mt-3">
             <a class="btn btn-success" href="{{ url('posts/create') }}">Ajouter un posts</a>
         </div>
-
+        @endauth
     </div>
 
 <hr>

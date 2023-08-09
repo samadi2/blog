@@ -21,9 +21,7 @@ Route::resource("posts", PostController::class);
 // Route::post('/posts/{id}', [CommentController::class,'store'])->name('comments.store');
 Route::post('/posts/{post}/comments', [CommentController::class,'store'])->name('comments.store');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
