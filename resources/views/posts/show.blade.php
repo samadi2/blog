@@ -29,6 +29,7 @@
         </div>
         <button type="submit" class="btn btn-primary mt-2">Soumettre mon commentaire</button>
     </form>     
+    @auth
     <div class="buttons mt-3 btn">
         <a href="{{ route('posts.edit', $post) }}" class="btn btn-info">Modifier</a>
         <form action="{{ url('posts/'. $post->id) }}" method="POST" style="display: inline">
@@ -38,6 +39,7 @@
         </form>
         <p><a href="{{ route('posts.index') }}" title="Retourner aux articles"  class="btn btn-info mt-2">Retourner aux posts</a></p>
     </div>
+    @endauth
 
 
 	
