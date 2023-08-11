@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 // use App\Models\Comment;
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Policies\PostPolicy;
 
 class PostController extends Controller
 {
@@ -52,11 +55,15 @@ class PostController extends Controller
      }
 
     public function edit(Post $post) { 
+        $this->authorize('update', $post);
+
         return view("posts.edit", compact("post"));
     }
 
     public function update(Request $request, Post $post) { 
-            // 1. La validation
+        $this->authorize('update', $post);
+
+        // 1. La validation
 
     // Les règles de validation pour "title" et "content"
     $rules = [
@@ -93,6 +100,7 @@ class PostController extends Controller
     }
 
     public function destroy(Post $post) { 
+        $this->authorize('delete', $post);
     // On supprime l'image existant
     Storage::delete($post->picture);
 
